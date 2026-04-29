@@ -1,0 +1,52 @@
+/* ===== CÀI ĐẶT CHUNG CHO TOÀN TRANG ===== */
+body {
+    margin: 0; /* bỏ khoảng trắng mặc định */
+    font-family: Arial, sans-serif; /* font chữ */
+    background: linear-gradient(to right, #e6ccff, #ccf2ff); /* nền chuyển màu */
+}
+
+/* ===== KHUNG CHÍNH BAO TOÀN BỘ NỘI DUNG ===== */
+.main-box {
+    width: 85%; /* độ rộng khung */
+    margin: 20px auto; /* căn giữa + tạo khoảng cách trên dưới */
+    background: #e6e6ff; /* màu nền */
+    border-radius: 20px; /* bo góc */
+    padding: 20px; /* khoảng cách bên trong */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* đổ bóng */
+}
+
+/* ===== CHIA BỐ CỤC TRÁI - PHẢI ===== */
+.container {
+    display: flex; /* dùng flexbox để chia cột */
+}
+
+/* ===== PHẦN BÊN TRÁI (ẢNH) ===== */
+.left {
+    width: 35%; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ===== ẢNH CHÂN DUNG ===== */
+.left img {
+    width: 80%; /* kích thước ảnh */
+    border-radius: 20px; /* bo góc ảnh */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* bóng ảnh */
+}
+
+/* ===== PHẦN BÊN PHẢI (NỘI DUNG) ===== */
+.right {
+    width: 65%; /* chiếm 65% */
+    padding: 20px 30px; /* khoảng cách bên trong */
+}
+
+/* ===== TIÊU ĐỀ ===== */
+h1 {
+    color: #6a0dad; /* màu tím */
+}
+
+/* ===== MỖI KHỐI NỘI DUNG ===== */
+.section {
+    margin-bottom: 30px; /* khoảng cách giữa các phần */
+}
