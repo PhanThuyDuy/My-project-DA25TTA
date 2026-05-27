@@ -1,0 +1,53 @@
+	div.container{
+		margin: 50px;
+		padding: 50px;
+	 background-color:black;
+	
+	}
+
+	form#controls{
+		background: linear-gradient(to right, #e6ccff, #ccf2ff,#ffff47,#ff2747);
+		width: 500px;
+		height: 400px;
+		margin: auto;
+		padding: 20px;
+		border-radius: 10px;
+	}
+
+	label{
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	div.form-group{
+		margin-bottom: 20px;
+	}
+
+	input#Username{
+		width: 90%;
+		padding: 10px;
+
+		border-radius: 5px;
+		border: 1px solid gray;
+
+		
+	}
+	
+	input#Pass{
+		width: 90%;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid gray; 
+		
+	}
+	
+	input#submit{
+	width: 20%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid gray; 
+	}
+	
+	h2#title {
+		text-transform:uppercase;
+	}

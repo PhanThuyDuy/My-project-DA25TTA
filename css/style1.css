@@ -1,0 +1,33 @@
+*{  padding: 10px;
+    margin:10px;
+    font-family: Arial;
+    background: linear-gradient(to right, #e6ccff, #ccf2ff); /* nền chuyển màu */
+    font-size:16px; 
+}
+
+div.container {
+   
+    margin:30px;
+    background: #e6e6ff; 
+    border-radius: 10px; 
+    padding: 30px; 
+    
+}
+
+img{   with:500px;
+	height: 500px;      
+ 	 border-radius: 100px;
+	
+}
+ 
+h1{
+text-transform:uppercase;
+}
+
+td#chinh{
+padding-left:100px;
+}
+
+table{
+width:100%;
+}

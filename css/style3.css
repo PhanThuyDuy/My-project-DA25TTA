@@ -1,0 +1,63 @@
+	div.container{
+		margin: 50px;
+		padding: 50px;
+	
+	
+	}
+
+	form#controls{
+		background: linear-gradient(to right, #e6ccff, #ccf2ff,#FAFAD2,#E0FFFF);
+		width: 700px;
+		height: 600px;
+		margin: auto;
+		padding: 20px;
+		border-radius: 10px;
+	}
+
+	label#td{ 
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	div.form-group{
+		margin-bottom: 20px;
+	}
+
+	input#Username{
+		width: 90%;
+		padding: 10px;
+
+		border-radius: 5px;
+		border: 1px solid gray;
+
+		
+	}
+	
+	input#tuoi{
+		width: 90%;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid gray; 
+		
+	}
+	
+	input#chec{
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	input#submit{
+	width: 20%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid gray; 
+	}
+	
+	h2#title {
+		text-transform:uppercase;
+	}

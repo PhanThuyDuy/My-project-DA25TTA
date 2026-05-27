@@ -1,0 +1,29 @@
+table{
+border :2px solid black ; 
+width:600px;
+height:500px;
+background: #e6e6ff; 
+padding:10px; 
+font-size:30px; 
+border-collapse: collapse;
+}
+
+ td { 
+border :2px solid rgb(0, 0, 0) ; /* Đường viền cho các ô trong bảng */
+text-align: center; /* Căn giữa nội dung trong ô */
+}
+
+body{
+    margin:0;
+    height:100vh; /* Đảm bảo chiều cao của body bằng chiều cao của cửa sổ trình duyệt */
+
+    background-image: url("../assets/images/cn.jpg"); /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Phủ đầy ảnh nền */ 
+    background-repeat: no-repeat;  /* không lặp ảnh */
+    background-position: center; /* Căn giữa ảnh nền */
+    
+    /* căn giữa*/  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

@@ -1,0 +1,34 @@
+table, th, td {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    margin: auto;
+
+     
+}
+
+table {
+    border-collapse: collapse;
+
+        width: 700px;
+		height: 600px;
+    }
+
+body{
+    background: linear-gradient(to right, #e6ccff, #ccf2ff,#FAFAD2,#E0FFFF);
+}
+th{
+    background-color: #9df593;
+}
+
+
+
+td{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+td#thanhtoan{
+    background-color: #b57dff53;
+   
+}
