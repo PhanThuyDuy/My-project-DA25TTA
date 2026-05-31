@@ -8,7 +8,7 @@
 div.container {
    
     margin:30px;
-    background: #e6e6ff; 
+    background: #ffffff; 
     border-radius: 10px; 
     padding: 30px; 
     
@@ -29,5 +29,5 @@ padding-left:100px;
 }
 
 table{
-width:100%;
+width:99%;
 }
