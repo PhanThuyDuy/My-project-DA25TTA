@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="vi">
+<head>
+    <title> Trang số thong tin san pham day du </title>  
+    <meta charset="utf-8"> 
+            
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  
+</head>
+    
+<body>
+    <div class = "container bg-success " > 
+        <div id="list">
+
+        </div>
+    </div>
+
+    <script>
+        //Xác định khung chứa danh sách sản phẩm
+        const list = document.getElementById("list"); 
+    
+        //Tạo khung chứa một sản phẩm <div class = "item"></div>
+        const item = document.createElement("div");
+        item.setAttribute("class","item");
+
+        //Tạo 2 khung chứa - ảnh và thông tin
+        //2.1 Khung chứa ảnh
+        const container_image = document.createElement("div"); 
+        container_image.setAttribute("class", "image");
+
+        //Tạo con khung chứa ảnh - hình ảnh của sản phẩm
+        const img = document.createElement("img");
+        img.setAttribute("src","../assets/images/dg.jpg");
+        img.setAttribute("alt","Dau goi");
+        img.setAttribute("style","width:100%; max-width:150px;");
+
+        //Thêm ảnh cho khung chứa ảnh
+        container_image.appendChild(img);
+
+
+        //Tạo khung chứa thông tin
+        const container_infor = document.createElement("div");
+        container_infor.setAttribute("class","info");
+
+        //tạo p đầu tiên - tên sản phẩm
+        const ten = document.createElement("p");
+        ten.innerHTML="dau goi dau"; 
+
+        const gia = document.createElement("p");
+        gia.innerHTML="150k/1chai";
+
+        const mota = document.createElement("p");
+        mota.innerHTML="dung de goi dau cho sach"; 
+
+        const lienket = document.createElement("a");
+        lienket.innerHTML="Xem chi tiet";
+        lienket.setAttribute("href","page6.html");
+
+        container_infor.appendChild(ten);
+        container_infor.appendChild(gia);
+        container_infor.appendChild(mota);
+        container_infor.appendChild(lienket);
+        
+        //Them 2 khung chứa ảnh và thông tin vào khung chứa item
+        item.appendChild(container_image); 
+        item.appendChild(container_infor); 
+
+        //Đưa khung chứa item và khung chứa list product
+        list.appendChild(item); 
+    </script>
+</body> 
+</html>
