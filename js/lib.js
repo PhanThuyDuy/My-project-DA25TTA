@@ -1,30 +1,54 @@
 const product = [
-   
-   { ten: "Dầu gội đầu",
-    gia :"150k/1chai",
-    mota:"dùng để gọi đầu sạch gàu, mượt tóc",
-    lienket:"page7.html",
-    img: "../assets/images/dg.jpg",
-    alt: "Dầu gọi"
-   },
-   {
-        ten: "Sữa tắm dưỡng da",
-        gia: "180k/1chai",
-        mota: "Giúp làn da mềm mịn, hương thơm quyến rũ",
-        lienket: "page7.html",
-        img: "../assets/images/suatam.jpg",
-        alt: "Sữa tắm"
-   },
-   {
-        ten: "Nước hoa cao cấp",
-        gia: "1200k/1chai",
-        mota: "Hương thơm quyến rũ nồng nàng ",
-        lienket: "page7.html",
-        img: "../assets/images/nuochoa.jpg",
-        alt: "Nước hoa"
-   }
-];
+     
+     {    ten: "Dầu gội đầu",
+          gia :"150k/1chai",
+          mota:"dùng để gọi đầu sạch gàu, mượt tóc",
+           lienket:"page7.html",
+          img: "../assets/images/dg.jpg",
+          alt: "Dầu gọi"
+     },
+     {
+          ten: "Sữa tắm dưỡng da",
+          gia: "180k/1chai",
+          mota: "Giúp làn da mềm mịn, hương thơm quyến rũ",
+          lienket: "page7.html",
+          img: "../assets/images/suatam.jpg",
+          alt: "Sữa tắm"
+    },
+    {
+          ten: "Nước hoa cao cấp",
+          gia: "1200k/1chai",
+          mota: "Hương thơm quyến rũ nồng nàng ",
+          lienket: "page7.html",
+          img: "../assets/images/nuochoa.jpg",
+          alt: "Nước hoa"
+     },
 
+     {
+          ten: "Sữa rửa mặt",
+          gia: "69k/1chai",
+          mota: "Sạch sâu da mặt của bạn mền mịn hơn  ",
+          lienket: "page7.html",
+          img: "../assets/images/suarm.jpg",
+          alt: "sữa rửa mặt"
+     },
+     {
+          ten: "Nước tẩy trang",
+          gia: "200k/1chai",
+          mota: "Tẩy sạch bụi bẩn trên da mặt ",
+          lienket: "page7.html",
+          img: "../assets/images/nuoctt.jpg",
+          alt: "sữa rửa mắt"
+     },
+     {
+          ten: "Nước rửa tay",
+          gia: "39k/1chai",
+          mota: "Sạch vi khuẩn bám trên tay bạn ",
+          lienket: "page7.html",
+          img: "../assets/images/nuocrt.jpg",
+          alt: "sữa rửa mắt"
+     }
+];
 
 function createItem(obj)
 {
@@ -34,8 +58,8 @@ function createItem(obj)
             //Tạo khung chứa một sản phẩm <div class = "item"></div>
             const item = document.createElement("div");
             // border: tạo viền, bg-white: nền trắng, p-3: khoảng cách bên trong, rounded: bo góc nhẹ
-            item.setAttribute("class", "item border bg-white p-3 rounded");
-
+            item.setAttribute("class", "col-12 col-md-4");
+            item.setAttribute("class", "col-12 col-md-4 card p-3");
             //Tạo 2 khung chứa - ảnh và thông tin
             //2.1 Khung chứa ảnh
             const container_image = document.createElement("div"); 
