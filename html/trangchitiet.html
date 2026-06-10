@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="vi">
+<head>
+    <title>Trang thông tin sản phẩm chi tiết</title>  
+    <meta charset="utf-8"> 
+    <script src="../js/lib.js"></script>
+</head>
+    
+<body>
+    <div id="container"> 
+        <p>Đây là trang chi tiết</p> 
+            
+        <img src="" alt="" id="image" style="max-width:300px; display:block; margin-bottom:10px;">
+        <h3 id="ten"></h3>
+        <p id="gia" style="color:red; font-weight:bold;"></p>
+        <p id="mota"></p>
+    </div>
+
+    <script>
+        // 1. Lấy ID từ URL bằng URLSearchParams
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id'); // Đổi tên thành productId cho rõ ràng
+
+        // 2. Tìm sản phẩm trong mảng 'product' (được kế thừa từ file lib.js)
+        // Lưu ý: product là mảng trong file lib.js, productId là id lấy từ URL
+        const foundProduct = product.find(obj => obj.id === productId);
+
+        // 3. Hiển thị dữ liệu ra màn hình
+        if (foundProduct) {
+            document.getElementById('ten').innerHTML = foundProduct.ten;
+            document.getElementById('gia').innerHTML = foundProduct.gia;
+            document.getElementById('mota').innerHTML = foundProduct.mota;
+            
+            // SỬA LỖI: Thẻ img dùng thuộc tính .src và .alt, không dùng innerHTML
+            const imgTag = document.getElementById('image');
+            imgTag.src = foundProduct.img;
+            imgTag.alt = foundProduct.alt;
+        } else {
+            document.getElementById('container').innerHTML = "<h3>Không tìm thấy sản phẩm này!</h3>"; 
+        }
+    </script>
+</body> 
+</html>
