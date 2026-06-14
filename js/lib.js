@@ -111,7 +111,7 @@ function loadAllProducts(objArray) {
     }
 }
 
-// Gọi hàm này ở trang danh sách sản phẩm (nếu cần)
+// gọi hàm chạy lại lần 2 
 // Tự động chạy khi tài liệu sẵn sàng
 window.addEventListener("DOMContentLoaded", () => {
     loadAllProducts(product);
