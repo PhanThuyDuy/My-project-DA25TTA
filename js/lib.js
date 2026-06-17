@@ -60,15 +60,17 @@ function createItem(obj) {
     if (!list) return; // Bảo vệ code không bị lỗi nếu trang không có thẻ #list
 
     const item = document.createElement("div");
-    item.setAttribute("class", "col-12 col-sm-6 col-lg-3 card p-3");
-    
+    item.setAttribute("class","col-12 col-sm-6 col-lg-4");
+    item.innerHTML = "";
+    item.classList.add("product-card");
+
     const container_image = document.createElement("div"); 
     container_image.setAttribute("class", "image text-center mb-3");
 
     const img = document.createElement("img");
     img.setAttribute("src", obj.img);
     img.setAttribute("alt", obj.alt);
-    img.setAttribute("style", "width:100%; max-width:150px;");
+    img.setAttribute("style","width:100%;height:220px;object-fit:contain;");
     img.setAttribute("class", "rounded");
 
     container_image.appendChild(img);
@@ -90,15 +92,20 @@ function createItem(obj) {
     
     const lienket = document.createElement("a");
     lienket.innerHTML = "Xem chi tiết";
-    // SỬA LỖI: Thêm dấu "=" vào sau ?id
     lienket.setAttribute("href", obj.lienket + "?id=" + obj.id); 
     lienket.setAttribute("class", "btn btn-primary text-white"); 
+
+     const mua = document.createElement("a");
+     mua.innerHTML = "Mua ngay";
+     mua.href="#";
+     mua.className="btn btn-success ms-2";
 
     container_infor.appendChild(ten);
     container_infor.appendChild(gia);
     container_infor.appendChild(mota);
     container_infor.appendChild(lienket);
-    
+    container_infor.appendChild(mua);
+
     item.appendChild(container_image); 
     item.appendChild(container_infor); 
 
@@ -111,8 +118,3 @@ function loadAllProducts(objArray) {
     }
 }
 
-// gọi hàm chạy lại lần 2 
-// Tự động chạy khi tài liệu sẵn sàng
-window.addEventListener("DOMContentLoaded", () => {
-    loadAllProducts(product);
-});
