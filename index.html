@@ -1,65 +1,87 @@
-    <!DOCTYPE html> 
-    <html lang="vi">
-    <head>
-    <title> Trang chủ </title>  
-    <meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+
     <link rel="stylesheet" href="css/styleindex.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
 
-    </head>
+<body>
 
+    <p id="name" style="display:none;">Cô Thanh</p>
 
-    <body>
+    <div class="main">
 
-    <p id="name"> Cô Thanh </p> 
+        <h1>💻 BÀI THỰC HÀNH</h1>
 
+        <p class="subtitle">
+            Môn Thiết kế Website
+        </p>
+
+        <div class="menu">
+
+            <a href="html/page1.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-user"></i> Buổi 1 - Thông tin cá nhân</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page2.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-pen"></i> Buổi 2 - Trang đăng ký</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page3.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-users"></i> Buổi 3 - Đăng ký câu lạc bộ</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page4.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-hand"></i> Buổi 4 - Trang xin chào</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page5.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-cake-candles"></i> Buổi 4 - Trang năm sinh</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page6.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-calculator"></i> Buổi 4 - Tính diện tích</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page7.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-money-bill"></i> Buổi 5 - Bảng giá tổng tiền</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="html/page8.html" target="_blank" class="card">
+                <span><i class="fa-solid fa-box"></i> Buổi 6,7,8 - Thông tin sản phẩm</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <footer>
+            © 2026 - Phan Thúy Duy
+        </footer>
+
+    </div>
 
     <script>
-
-        const  ten = document.getElementById("name");
-        window.alert("Xin Chào " + ten.innerHTML + "!");
-
+        const ten = document.getElementById("name");
+        window.onload = function () {
+            alert("Xin chào " + ten.innerHTML + "!");
+        };
     </script>
 
-        <table>
-            <tr>
-                <td><a href="html/page1.html" target="_blank">Thông tin cá nhân </a></td> 
-            </tr>
+</body>
 
-            <tr>
-                <td><a href="html/page2.html" target="_blank"> Trang đăng nhập </a></td>
-            </tr> 
- 
-
-            <tr>
-                <td><a href="html/page3.html" target="_blank">Trang đăng ký thành viên câu lạc bộ </a></td>
-            </tr> 
-
-            <tr> 
-                <td><a href="html/page4.html" target="_blank"> Trang xin chào </a></td>
-
-            </tr>	
-
-            <tr> 
-                <td><a href="html/page5.html" target="_blank">Trang năm sinh </a></td>
-
-
-            </tr> 
-            <tr>
-                <td><a href="html/page6.html" target="_blank"> Trang tính diện tích </a></td>
-
-            </tr> 
-
-            <tr>
-                    <td><a href="html/page7.html" target="_blank"> Trang bảng giá tổng tiền </a></td>
-            </tr>
-           
-            <tr>
-                    <td><a href="html/page8.html" target="_blank"> Trang thông tin sản phẩm đầy đủ </a></td>
-            </tr> 
-	
-        </table> 
-
-
-</body> 
 </html>

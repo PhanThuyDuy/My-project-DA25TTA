@@ -13,34 +13,63 @@
 
 
 
-	<form id="controls">
-	 <h2 id="title"> Login </h2> 
+	<form id="controls" onsubmit="return validateForm(event)">
+	 <h2 id="title"> Register </h2> 
 	  
 	<div class="form-group">
 	  <label for="Username">Username:</label>
-	  <input type="text" id="Username" name="Username">
+	  <input type="text" id="Username" name="Username" placeholder="Nhập tên đăng nhập">
+	  </div>
+	  
+	  <div class="form-group">
+	  <label for="Email">Email:</label>
+	  <input type="email" id="Email" name="Email" placeholder="Nhập email của bạn">
 	  </div>
 	  
 	  <div class="form-group">
 	  <label for="Pass">Password:</label>
-	  <input type="password" id="Pass" name="Pass">
+	  <input type="password" id="Pass" name="Pass" placeholder="Nhập mật khẩu">
+	  </div>
+	  
+	  <div class="form-group">
+	  <label for="ConfirmPass">Confirm Password:</label>
+	  <input type="password" id="ConfirmPass" name="ConfirmPass" placeholder="Xác nhận mật khẩu">
 	  </div> <br>
 	 
-	 <input type="submit" value="submit" id="submit" onclick="window.location.href='../index.html'; return false;">
-	 <input type="submit" value="cancel"id="submit" onclick="window.alert ('Bạn đã hủy đăng nhập') ">
+	 <input type="submit" value="submit" id="submitBtn">
+	 <input type="button" value="cancel" id="cancelBtn" onclick="cancelForm()">
 	
 	</form> 
 
 </div>
 
+<script>
+// Hàm kiểm tra dữ liệu nhập vào form
+function validateForm(event) {
+	event.preventDefault();
+	const username = document.getElementById("Username").value.trim();
+	const email = document.getElementById("Email").value.trim();
+	const password = document.getElementById("Pass").value.trim();
+	const confirmPass = document.getElementById("ConfirmPass").value.trim();
+	
+	if (username === "" || email === "" || password === "" || confirmPass === "") {
+		window.alert("Vui lòng nhập đủ tất cả các ô thông tin!");
+		return false;
+	}
+	
+	if (password !== confirmPass) {
+		window.alert("Mật khẩu không trùng khớp!");
+		return false;
+	}
+	
+	window.alert("Bạn đã đăng ký thành công");
+	return true;
+}
 
-
-
-
-
-
-
-
+function cancelForm() {
+	window.alert("Bạn đã hủy đăng ký");
+}
+</script>
 
 </body> 
 

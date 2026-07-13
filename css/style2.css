@@ -1,53 +1,140 @@
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	div.container{
-		margin: 50px;
-		padding: 50px;
-	 background-color:black;
-	
+		width: 100%;
+		padding: 20px;
 	}
 
 	form#controls{
-		background: linear-gradient(to right, #e6ccff, #ccf2ff,#ffff47,#ff2747);
-		width: 500px;
-		height: 400px;
+		background: white;
+		width: 100%;
+		max-width: 600px;
 		margin: auto;
-		padding: 20px;
-		border-radius: 10px;
+		padding: 40px;
+		border-radius: 15px;
+		box-shadow: 0 15px 35px rgba(90, 86, 86, 0.2);
+		animation: slideIn 0.5s ease-out;
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateY(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	h2#title {
+		text-transform: uppercase;
+		text-align: center;
+		color: #333;
+		font-size: 28px;
+		margin-bottom: 30px;
+		letter-spacing: 1px;
+		font-weight: 700;
 	}
 
 	label{
 		display: block;
-		margin-bottom: 5px;
+		margin-bottom: 8px;
+		color: #555;
+		font-weight: 600;
+		font-size: 14px;
+		letter-spacing: 0.5px;
 	}
 
 	div.form-group{
-		margin-bottom: 20px;
+		margin-bottom: 22px;
 	}
 
-	input#Username{
-		width: 90%;
-		padding: 10px;
+	input#Username,
+	input#Email,
+	input#Pass,
+	input#ConfirmPass{
+		width: 100%;
+		padding: 12px 15px;
+		border-radius: 8px;
+		border: 2px solid #e0e0e0;
+		font-size: 14px;
+		transition: all 0.3s ease;
+		font-family: inherit;
+	}
 
-		border-radius: 5px;
-		border: 1px solid gray;
+	input#Username:focus,
+	input#Email:focus,
+	input#Pass:focus,
+	input#ConfirmPass:focus{
+		outline: none;
+		border-color: #667eea;
+		box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+		background-color: #f8f9ff;
+	}
 
-		
+	input#Username::placeholder,
+	input#Email::placeholder,
+	input#Pass::placeholder,
+	input#ConfirmPass::placeholder {
+		color: #999;
 	}
-	
-	input#Pass{
-		width: 90%;
-		padding: 10px;
-		border-radius: 5px;
-		border: 1px solid gray; 
-		
+
+	#submitBtn,
+	#cancelBtn {
+		width: 48%;
+		padding: 12px 20px;
+		border-radius: 8px;
+		border: none;
+		font-size: 15px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
-	
-	input#submit{
-	width: 20%;
-	padding: 10px;
-	border-radius: 5px;
-	border: 1px solid gray; 
+
+	#submitBtn {
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		margin-right: 4%;
 	}
-	
-	h2#title {
-		text-transform:uppercase;
+
+	#submitBtn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+	}
+
+	#submitBtn:active {
+		transform: translateY(0);
+	}
+
+	#cancelBtn {
+		background-color: #f0f0f0;
+		color: #333;
+		border: 2px solid #e0e0e0;
+	}
+
+	#cancelBtn:hover {
+		background-color: #e8e8e8;
+		border-color: #d0d0d0;
+		transform: translateY(-2px);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	#cancelBtn:active {
+		transform: translateY(0);
 	}
