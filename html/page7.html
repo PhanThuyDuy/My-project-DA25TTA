@@ -1,80 +1,100 @@
 <!DOCTYPE html> 
 <html lang="vi">
 <head>
-<title> Trang chủ </title>  
-<meta charset="utf-8"> 
- 
-<link rel="stylesheet" href="../css/style7.css">
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hóa đơn bán hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style7.css">
 </head>
-<body> 
+<body>
+    <div class="container invoice-card">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-4">
+                    <div>
+                        <h1 class="h4 mb-2">Hóa đơn bán hàng</h1>
+                        <p class="text-muted mb-0">Danh sách sản phẩm, số lượng và tổng thành tiền.</p>
+                    </div>
+        
+                </div>
 
-<table>
-	<tr>
-		<th > STT </th>
-		<th>Tên hàng hóa </th>
-		<th> Số lượng 	</th>
-		<th> Đơn giá </th>
-		<th> ĐVT </th>
-		<th> Thành tiền </th>
-	</tr>
-	<tr>
-		<td > 1 </td>
-		<td> Mì coluna </td>
-		<td class="soluong"> 2 </td>
-		<td class="dongia"> 105 </td>
-		<td> thùng </td>
-		<td class="thanhtien"> ? </td>
-	</tr>
-	
-	<tr>
-		<td > 2 </td>
-		<td> Sữa ông thọ </td>
-		<td class="soluong"> 4 </td>
-		<td class="dongia"> 200 </td>
-		<td> thùng </td>
-		<td class="thanhtien"> ? </td>
-	</tr>
-	
-	<tr>
-		<td > 3 </td>
-		<td> Xúc xích cp</td>
-		<td class="soluong"> 120 </td>
-		<td class="dongia"> 45 </td>
-		<td> túi </td>
-		<td class="thanhtien"> ? </td>
-	</tr>
-    
-	<tr>
-		<td > 4 </td>
-		<td> dầu gội đầu</td>
-		<td class="soluong"> 20 </td>
-		<td class="dongia"> 150 </td>
-		<td> chai </td>
-		<td class="thanhtien"> ? </td>
-	</tr>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th>Tên hàng hóa</th>
+                                <th class="text-end">Số lượng</th>
+                                <th class="text-end">Đơn giá</th>
+                                <th class="text-center">ĐVT</th>
+                                <th class="text-end">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>Mì coluna</td>
+                                <td class="text-end soluong">2</td>
+                                <td class="text-end dongia">105</td>
+                                <td class="text-center">thùng</td>
+                                <td class="text-end thanhtien">?</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>Sữa ông thọ</td>
+                                <td class="text-end soluong">4</td>
+                                <td class="text-end dongia">200</td>
+                                <td class="text-center">thùng</td>
+                                <td class="text-end thanhtien">?</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>Xúc xích cp</td>
+                                <td class="text-end soluong">120</td>
+                                <td class="text-end dongia">45</td>
+                                <td class="text-center">túi</td>
+                                <td class="text-end thanhtien">?</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>Dầu gội đầu</td>
+                                <td class="text-end soluong">20</td>
+                                <td class="text-end dongia">150</td>
+                                <td class="text-center">chai</td>
+                                <td class="text-end thanhtien">?</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="text-end fw-semibold">Tổng thanh toán</td>
+                                <td class="text-end fw-semibold" id="thanhtoan">?</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sl = document.getElementsByClassName('soluong');
+            const dg = document.getElementsByClassName('dongia');
+            const tt = document.getElementsByClassName('thanhtien');
+            let tongthanhtoan = 0;
 
-<tr>  <td colspan="6" id ="thanhtoan"> ? </td>  </tr>
+            for (let i = 0; i < sl.length; i++) {
+                const soLuong = Number(sl[i].textContent.trim());
+                const donGia = Number(dg[i].textContent.trim());
+                const thanhTien = soLuong * donGia;
+                tt[i].textContent = thanhTien.toLocaleString('vi-VN');
+                tongthanhtoan += thanhTien;
+            }
 
-</table> 
-
-<script>
-let sl = document.getElementsByClassName("soluong");
-let dg = document.getElementsByClassName("dongia");		
-let tt = document.getElementsByClassName("thanhtien");
-let tongthanhtoan = 0; 
-for (let i = 0; i < sl.length; i++) {
-	tt[i].innerHTML = Number(sl[i].innerHTML) * Number(dg[i].innerHTML);
-	tongthanhtoan += Number(tt[i].innerHTML);
-}
-document.getElementById("thanhtoan").innerHTML = `Tổng thành tiền: ${tongthanhtoan} VNĐ `;
-
-</script> 
-
-
-</body>
+            document.getElementById('thanhtoan').textContent = tongthanhtoan.toLocaleString('vi-VN') + ' VNĐ';
+        });
+    </script>
 
 
 
